@@ -1,4 +1,4 @@
-![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/'frig this friggin thing.jpg')
+![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/forreal.png)
 ![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/1.jpg)
 ![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/2.jpg)
 ![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/3.jpg)
