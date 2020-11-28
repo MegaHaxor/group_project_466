@@ -1,47 +1,49 @@
--- DROP TABLE `Contains`;
--- DROP TABLE Eat;
--- DROP TABLE Weighs;
--- DROP TABLE Workout;
--- DROP TABLE Exercise;
--- DROP TABLE Chemical;
--- DROP TABLE Edible;
--- DROP TABLE `User`;
+/*
+DROP TABLE `Contains`;
+DROP TABLE Eat;
+DROP TABLE Weighs;
+DROP TABLE Workout;
+DROP TABLE Exercise;
+DROP TABLE Chemical;
+DROP TABLE Edible;
+DROP TABLE `User`;
+*/
 
 CREATE TABLE `User` (
-    accountId         INT PRIMARY KEY,
-    name              CHAR(15),
-    pass              CHAR(32)
+    accountId         INT UNSIGNED PRIMARY KEY,
+    name              CHAR(15) NOT NULL,
+    pass              CHAR(32) NOT NULL
 );
 
 CREATE TABLE Edible (
     edibleName        CHAR(15) PRIMARY KEY,
-    amountServing     INT,
-    calsServing       INT,
-    gramsFat          INT,
-    gramsProtein      INT,
-    gramsCarbs        INT,
-    units             CHAR(15),
-    `type`            CHAR(8)
+    amountServing     INT UNSIGNED,
+    calsServing       INT UNSIGNED,
+    gramsFat          INT UNSIGNED,
+    gramsProtein      INT UNSIGNED,
+    gramsCarbs        INT UNSIGNED,
+    units             CHAR(15) NOT NULL,
+    `type`            CHAR(8) NOT NULL
 );
 
 CREATE TABLE Exercise (
     exerciseName      CHAR(15),
     `type`            CHAR(20), 
-    calsMinute        FLOAT,
+    calsMinute        FLOAT UNSIGNED NOT NULL,
 
     PRIMARY KEY (exerciseName)
 );
 
 CREATE TABLE Chemical (
     chemName          CHAR(15) PRIMARY KEY,
-    daily             INT
+    daily             INT UNSIGNED
 );
 
 CREATE TABLE Workout (
-    accountID         INT,
+    accountID         INT UNSIGNED,
     exerciseName      CHAR(15),
-    intensity         CHAR(15),
-    `length`          INT,
+    intensity         CHAR(6) NOT NULL,
+    `length`          INT UNSIGNED NOT NULL,
     `dateTime`        DATETIME, -- date and time of the activity
 
     PRIMARY KEY (exerciseName, accountID, `datetime`),
@@ -50,18 +52,18 @@ CREATE TABLE Workout (
 );
 
 CREATE TABLE Weighs (
-    accountID         INT,
+    accountID         INT UNSIGNED,
     `dateTime`        DATETIME,
-    pounds            INT,
+    pounds            INT UNSIGNED NOT NULL,
     
     PRIMARY KEY (accountID, `dateTime`)
 );
 
 CREATE TABLE Eat (
-    accountID         INT,
+    accountID         INT UNSIGNED,
     edibleName        CHAR(15),
     `dateTime`        DATETIME,
-    amount            INT,
+    amount            INT UNSIGNED NOT NULL,
     
     PRIMARY KEY (accountID, `datetime`, edibleName),
     FOREIGN KEY (accountID) REFERENCES `User`(accountID),
@@ -71,7 +73,7 @@ CREATE TABLE Eat (
 CREATE TABLE `Contains` (
     edibleName        CHAR(15),
     chemName          CHAR(15),
-    amountChem        INT,
+    amountChem        INT UNSIGNED NOT NULL,
     
     PRIMARY KEY (edibleName, chemName),
     FOREIGN KEY (edibleName) REFERENCES Edible(edibleName),
