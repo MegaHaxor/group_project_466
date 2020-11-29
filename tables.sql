@@ -10,7 +10,7 @@ DROP TABLE `User`;
 */
 
 CREATE TABLE `User` (
-    accountId         INT UNSIGNED PRIMARY KEY,
+    accountId         INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name              CHAR(15) NOT NULL,
     pass              CHAR(32) NOT NULL
 );
@@ -18,11 +18,11 @@ CREATE TABLE `User` (
 CREATE TABLE Edible (
     edibleName        CHAR(15) PRIMARY KEY,
     amountServing     INT UNSIGNED,
+    units             CHAR(15) NOT NULL,
     calsServing       INT UNSIGNED,
     gramsFat          INT UNSIGNED,
     gramsProtein      INT UNSIGNED,
     gramsCarbs        INT UNSIGNED,
-    units             CHAR(15) NOT NULL,
     `type`            CHAR(8) NOT NULL
 );
 
@@ -36,7 +36,7 @@ CREATE TABLE Exercise (
 
 CREATE TABLE Chemical (
     chemName          CHAR(15) PRIMARY KEY,
-    daily             INT UNSIGNED
+    daily             FLOAT UNSIGNED
 );
 
 CREATE TABLE Workout (
@@ -63,7 +63,7 @@ CREATE TABLE Eat (
     accountID         INT UNSIGNED,
     edibleName        CHAR(15),
     `dateTime`        DATETIME,
-    amount            INT UNSIGNED NOT NULL,
+    amount            FLOAT UNSIGNED NOT NULL,
     
     PRIMARY KEY (accountID, `datetime`, edibleName),
     FOREIGN KEY (accountID) REFERENCES `User`(accountID),
@@ -73,7 +73,7 @@ CREATE TABLE Eat (
 CREATE TABLE `Contains` (
     edibleName        CHAR(15),
     chemName          CHAR(15),
-    amountChem        INT UNSIGNED NOT NULL,
+    amountChem        FLOAT UNSIGNED NOT NULL,
     
     PRIMARY KEY (edibleName, chemName),
     FOREIGN KEY (edibleName) REFERENCES Edible(edibleName),
