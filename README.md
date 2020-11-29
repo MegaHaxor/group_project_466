@@ -1,3 +1,4 @@
+https://docs.google.com/document/d/1babcap-09n_zQtTNQGGy85jXTItnHdmLo5ynFFvzTMY/edit
 ![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/lastoneisware.png)
 ![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/1.jpg)
 ![alt text](https://github.com/MegaHaxor/group_project_466/blob/main/dumb_pics/13.jpg)
