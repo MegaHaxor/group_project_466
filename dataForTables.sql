@@ -90,6 +90,7 @@ INSERT INTO Workout(accountID, exerciseName, intensity, length, dateTime)
            '50',
            '2020-11-3');
 
+-- rest of data needs to change eventually
 INSERT INTO Chemical(chemName, daily)
     VALUES('Calcium',
            '1300');
@@ -189,4 +190,22 @@ INSERT INTO Eat(accountID, edibleName, dateTime, amount)
     VALUES('1',
            'McNuggets',
            '2020-11-1 13:10:25',
+           '73');
+
+INSERT INTO Eat(accountID, edibleName, dateTime, amount)
+    VALUES('1',
+           'Big Mac',
+           '2020-11-2 3:33',
+           '100');
+
+INSERT INTO Eat(accountID, edibleName, dateTime, amount)
+    VALUES('1',
+           'McChicken',
+           '2020-11-3 8',
+           '74');
+
+INSERT INTO Eat(accountID, edibleName, dateTime, amount)
+    VALUES('1',
+           'McNuggets',
+           '2020-11-4 13:10:25',
            '73');
