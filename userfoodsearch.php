@@ -10,7 +10,7 @@
    //try for login
    try
    {
-	   $dsn = "mysql:host=courses;dbname=z1880484;";
+	   $dsn = "mysql:host=courses;dbname=z1880484";
 	   $pdo = new PDO($dsn, $username, $password);
 	   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	   

@@ -3,7 +3,7 @@
 
 <?php
    $host = 'turing.cs.niu.edu';
-   $username = 'z1880484';
+  $username = 'z1880484';
    $password = '2000Nov16';
  
    
