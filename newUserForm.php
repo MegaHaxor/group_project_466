@@ -67,7 +67,7 @@ if(isset($_POST['name']))
             $result = $pdo->query("SELECT * FROM User ORDER BY Userid DESC LIMIT 1");
             $ans = $result->fetch(PDO::FETCH_ASSOC);
 
-            echo "<br/><h4>" . $ans['name'] . " your Userid is " . $_POST['Userid'] . " thank you for making an account!</h4>";
+            echo "<br/><h4>" . $_POST['name'] . " your Userid is " . $_POST['Userid'] . " thank you for making an account!</h4>";
         }
         else
             echo"You must enter a password!";
