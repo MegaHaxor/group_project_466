@@ -114,25 +114,8 @@ INSERT INTO Chemical(chemName, daily)
 INSERT INTO Tasty (TastyName,CalsServing,GramsFat,GramsProtein,GramsCarbs,Vitamin_d,GramsCalcium,GramsIron,GramsPotassium) 
  values("Spaghetti",175.5,10,10.2,15.5,20.1,25.5,30.3,35.5);
 
-INSERT INTO Tasty (TastyName,CalsServing,GramsFat,GramsProtein,GramsCarbs,Vitamin_d,GramsCalcium,GramsIron,GramsPotassium) 
-    VALUES('Big Mac',
-           '550',
-           '30',
-           '25',
-           '45',
-           '10.2',
-           '17.8',
-           '5.6',
-           '55.6');
-
 INSERT INTO Eats(Userid,TastyName,AmountServing,eating_date)
  values("Chrix","Spaghetti",1.25,'2020-10-02');
  
 INSERT INTO Eats(Userid,TastyName,AmountServing,eating_date)
  values("Chrix","Spaghetti",2.2,'2020-10-02');
-
-INSERT INTO Eats(Userid,TastyName,AmountServing,eating_date)
-    VALUES('Chrix',
-           'Big Mac',
-           '1',
-           '2020-10-03');

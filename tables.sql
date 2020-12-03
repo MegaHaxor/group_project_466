@@ -31,14 +31,14 @@ CREATE TABLE Tasty(
 CREATE TABLE Exercise (
     exerciseName      CHAR(15),
     `type`            CHAR(20), 
-    calsHour          FLOAT UNSIGNED NOT NULL,
+    calsHour          INT UNSIGNED NOT NULL,
 
     PRIMARY KEY (exerciseName)
 );
 
 CREATE TABLE Chemical (
     chemName          CHAR(15) PRIMARY KEY,
-    daily             FLOAT UNSIGNED
+    daily             FLOAT(10,2) UNSIGNED
 );
 
 CREATE TABLE Workout (
